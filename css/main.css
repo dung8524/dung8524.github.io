@@ -1,17 +1,18 @@
 ﻿@charset "utf-8";
 #header {background:#fff; text-align:center; padding:20px 0 0 0; background:url(../images/main_bg.jpg) repeat 50% 0; border-bottom:1px solid #000;}
 #header h1 {width:100%; margin:0 auto; padding-bottom:20px; color:#afdb00; text-align:center; border-bottom:1px solid #000;}
-#header ul.nav {width:100%; margin:0 auto; zoom:1; border-top:1px solid dark-gray;}
-#header ul.nav:after {display:block; content:""; clear:both;}
-#header ul.nav li {float:left; cursor:pointer; color:#fff; width:50%; height:35px; padding-top:15px; text-align:center; font-size:1.5em; font-weight:bold;}
+#header .nav:after {display:block; content:""; clear:both;}
+#header .nav li {float:left; width:50%; height:50px; text-align:center;}
+#header .nav li a {display:block; line-height:50px; color:#fff; font-size:1.5em; font-weight:bold;}
 #header .studyDate {font-size:0.8em;}
-#header .profile {font-style:italic; font-size:0.8em;}
+#header .profile {color:#ececec; font-style:italic; font-size:0.8em;}
 
 #profile {background:black; border-top:1px solid dark-gray; display:none; padding:20px 0;}
 #profile .content {width:90%;  padding:20px 10px; margin:0 auto; color:#ececec; background:#444c4e; -webkit-border-top-left-radius: 5px;-webkit-border-top-right-radius: 5px;-moz-border-radius-topleft: 5px;
 -moz-border-radius-topright: 5px;border-top-left-radius: 5px;border-top-right-radius: 5px;}
 #profile .content strong {color:#fff;}
 #profile .content a {color:#ececec;}
+#profile .content .profile {color:#ececec; font-style:italic; font-size:0.8em;}
 #profile h2 {text-align:center; margin-top:20px;}
 .line {height:1px; margin:10px auto;  background:#9c9c9c;}
 

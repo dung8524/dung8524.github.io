@@ -3,45 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/main.css" />
 <script src="js/jquery-1.7.2.min.js"></script>
 <script src="js/jquery.masonry.min.js"></script>
-<link rel="stylesheet" href="css/master.css" type="text/css">
 <title>Project BK</title>
 <script>
+	$(function(){
+		var $worklist = $('#worklist');
+		$worklist.imagesLoaded(function(){
+			$worklist.masonry({
+				itemSelector: '#worklist li',
+				columnWidth: 250,
+				isAnimated: true,
+				isResizable: true,
+				isFitWidth: true
+			});
+		});
+	});
 	$(document).ready(function(){
-		$(function(){
-			var $worklist = $('#worklist');
-			$worklist.imagesLoaded(function(){
-				$worklist.masonry({
-					itemSelector: '#worklist li',
-					columnWidth: 250,
-					isAnimated: true,
-					isResizable: true,
-					isFitWidth: true
-				});
-			});
+		$('.nav li a').on('click', function(){
+			var navIdx = $('.nav li a').index(this);
+			if(navIdx == 0){
+				$('#profile').is(':visible') ? $('#profile').slideUp(300) : $('#profile').slideDown(300);
+			}else if(navIdx == 1){
+				$('#profile').slideUp(300);
+			}else{
+				$('#profile').slideUp(300);
+			}
 		});
-		$('.nav li').each(function(){
-			$(this).click(function(){
-				var clickCheck = $(this).index();
-				var onCheck = $('#profile').hasClass('on');			
-				if( onCheck != 0 ){
-					closeCont();
-				}else{
-					if(clickCheck == 0) {
-						openCont();
-					}else{
-						return false ;
-					}
-				}
-			});
-		});
-		function openCont(){
-			$('#profile').addClass('on').slideDown(300);
-		}; 
-		function closeCont(){
-			$('#profile').removeClass('on').slideUp(300);
-		} 
 	});
 </script>
 </head>
@@ -50,8 +40,9 @@
 	<div id="header">
 		<h1><img src="images/brand_eng.png" alt="project bk" /></h1>
 		<ul class="nav">
-			<li>Profile</li>
-			<li>Works</li>
+			<li><a href="javascript:;">Profile</a></li>
+			<li><a href="javascript:;">Works</a></li>
+			<!--<li><a href="javascript:;">Study</a></li>-->
 		</ul>
 	</div>
 	<div id="profile">
@@ -83,7 +74,7 @@
 			<div class="line"></div>
 			<strong>배움, 활동</strong><br />
 			<span class="studyDate">2016.04.05 &gt;  </span>기술로 동행하다 - 2016 NULY 세미나<br />
-			<span class="studyDate">2016.03.04 ~ 현재 &gt;  </span>하코사 Angularjs 오프 스터디 모임 참석 중<br />
+			<span class="studyDate">2016.03.04 ~ 현재 &gt;  </span>하코사 Angularjs 오프라인 스터디 모임 참석 중<br />
 			<span class="studyDate">2015.12.13 ~ 현재 &gt;  </span>웹동네 IT도서평가단 활동 중<br />
 			<span class="studyDate">2015.12.09 &gt;  </span>W3C HTML5 Conference 2015<br />
 			<span class="studyDate">2013.07.27 &gt;  </span>Sharing is Victory 2013 접근성 함께! 더 널리! 참여 <br />
@@ -519,7 +510,10 @@
 				<!--<dd>2011.02 ~ 2011.03</dd>-->
 			</dl>
 		</li>				
-	</ul>	
+	</ul>
+	<!--<ul id="studyList">
+		<li>준비중</li>
+	</ul>-->
 </div>
 </body>
 </html>
