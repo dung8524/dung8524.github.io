@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.masonry.min.js"></script>
+<link rel="stylesheet" href="css/master.css" type="text/css">
+<title>Project BK</title>
+<script>
+	$(document).ready(function(){
+		$(function(){
+			var $worklist = $('#worklist');
+			$worklist.imagesLoaded(function(){
+				$worklist.masonry({
+					itemSelector: '#worklist li',
+					columnWidth: 250,
+					isAnimated: true,
+					isResizable: true,
+					isFitWidth: true
+				});
+			});
+		});
+		$('.nav li').each(function(){
+			$(this).click(function(){
+				var clickCheck = $(this).index();
+				var onCheck = $('#profile').hasClass('on');			
+				if( onCheck != 0 ){
+					closeCont();
+				}else{
+					if(clickCheck == 0) {
+						openCont();
+					}else{
+						return false ;
+					}
+				}
+			});
+		});
+		function openCont(){
+			$('#profile').addClass('on').slideDown(300);
+		}; 
+		function closeCont(){
+			$('#profile').removeClass('on').slideUp(300);
+		} 
+	});
+</script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<h1><img src="images/brand_eng.png" alt="project bk" /></h1>
+		<ul class="nav">
+			<li>Profile</li>
+			<li>Works</li>
+		</ul>
+	</div>
+	<div id="profile">
+		<div class="content">
+			<strong>이름</strong>&nbsp;심병기 <br />
+			<strong>생년월일</strong>&nbsp;1986.01.30<br />
+			<strong>핸드폰</strong>&nbsp;010-31XX-85XX<br />
+			<strong>이메일</strong>&nbsp;dung8524@naver.com<br />
+			<strong>페이스북</strong>&nbsp;<a href="http://facebook.com/byunki" target="_blank">http://facebook.com/byunki</a>
+			<div class="line"></div>
+			<strong>취미</strong>&nbsp;캠핑, 배드민턴, LOL(ID : 심비행기), 서든어택<br />
+			<div class="line"></div>
+			<strong>병역</strong>&nbsp;2010년 8월 육군 부사관 만기 전역<br />
+			<div class="line"></div>
+			<strong>주요 경력</strong><br />
+			<!--&nbsp;Pixelab <em class="profile">(프리랜서팀)</em> <span class="studyDate">(2015.05.25 ~ )</span><br />-->
+			&nbsp;(주)그린웍스 <em class="profile">대리, IT사업부</em> <span class="studyDate">(2014.03.17 ~ 2015.05.18)</span><br />
+			&nbsp;(주)xeogen <em class="profile">사원, w퍼블리싱팀</em> <span class="studyDate">(2013.02.25 ~ 2014.03.13)</span><br />
+			&nbsp;(주)디아이티 <em class="profile">연구원, 마케팅기획팀</em> <span class="studyDate">(2011.01.24 ~ 2013.02.18)</span><br />
+			<div class="line"></div>
+			<strong>기술</strong> &nbsp;HTML/HTML5, CSS2/CSS3, 웹접근성, Webdesign, jQuery, UI script<br />
+			<strong>도구</strong> &nbsp;Coda, Eclipse, Editplus, Notepad++, Photoshop, Flash, Dreamweaver<br />
+			<strong>자격증</strong> &nbsp;운전면허1종보통, 웹디자인기능사, 컴퓨터그래픽스운용기능사, 
+			GTQ그래픽기술 2급, 정보처리기능사, 정보기기운용기능사, 워드프로세서2급<br />
+			<div class="line"></div>
+			<strong>가방끈</strong><br />
+			열린사이버대학교 멀티미디어디자인학과 2016년 02월 졸업<br />
+			가천길대학 웹정보산업과 2학년 자퇴<br />
+			<div class="line"></div>
+			<strong>배움, 활동</strong><br />
+			<span class="studyDate">2016.04.05 &gt;  </span>기술로 동행하다 - 2016 NULY 세미나<br />
+			<span class="studyDate">2016.03.04 ~ 현재 &gt;  </span>하코사 Angularjs 오프 스터디 모임 참석 중<br />
+			<span class="studyDate">2015.12.13 ~ 현재 &gt;  </span>웹동네 IT도서평가단 활동 중<br />
+			<span class="studyDate">2015.12.09 &gt;  </span>W3C HTML5 Conference 2015<br />
+			<span class="studyDate">2013.07.27 &gt;  </span>Sharing is Victory 2013 접근성 함께! 더 널리! 참여 <br />
+			<span class="studyDate">2012.06.30 - 2012.08.03 &gt; </span>자바스크립트&amp;제이쿼리 완벽가이드 40시간 수료(주말반)<br />
+			<span class="studyDate">2012.03 &gt; </span>'HTML5 모바일 웹앱' 과정 수료 <br />
+			<span class="studyDate">2012.03.21 &gt; </span>대표포털들의 2012년 웹표준 전략&amp;이슈 참여 <br />
+			<span class="studyDate">2012.02.25 &gt; </span>'마크업 개발자를 위한 NHN UIT센터 오픈 워크샵' 참여<br />
+			<span class="studyDate">2011.10 &gt; </span>'ActiveX 대체기술 &amp; 웹표준 실무 적용기술' 세미나 참여 <br />
+			<span class="studyDate">2011.04.02 - 2011.04.16 &gt; </span>'웹표준&amp;모바일 UI디자인' 과정 수료(주말반)<br />
+			<span class="studyDate">2010.09 - 2011.01 &gt; </span>홍시디자인학원 멀티미디어웹 과정 (420시간) 수료<br />
+		</div>
+		<h2><img src="images/brand_kor.png" alt="project bk" /></h2>
+	</div>
+	<ul id="worklist">
+	<!--
+		<li>
+			<img src="images/smart_on.jpg" alt="" />
+			<dl>
+				<dt>스마트 건강도시 APP</dt>
+				<dd>Hybrid APP ,웹사이트 제작 / Pixelab</dd>
+				<dd>iOS, Android</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<dd>2015.09.01 ~ </dd>
+				<dd><a href="" target="_blank">Android</a>
+				<span>/</span> 
+				<a href="" target="_blank">IOS</a>
+				<span>/</span> 
+				<a href="" target="_blank">Web</a></dd>
+			</dl> 
+		</li>
+		<li>
+			<img src="images/daltalk_on.jpg" alt="" />
+			<dl>
+				<dt>Daltalk APP</dt>
+				<dd>Hybrid APP / Pixelab</dd>
+				<dd>iOS, Android</dd>
+				<dd>html, css, UI script (100%) / 네이티브앱 가이드</dd>
+				<dd>2015.06.19 ~ </dd>
+				<dd><a href="" target="_blank">Android</a>
+				<span>/</span> 
+				<a href="https://itunes.apple.com/kr/app/daltalk/id1037229942?mt=8" target="_blank">IOS</a>
+				<span>/</span> 
+				<a href="" target="_blank">Web</a></dd>
+			</dl> 
+		</li>
+		
+		<li>
+			<img src="images/tech_on.jpg" alt="" />
+			<dl>
+				<dt>비드버드 웹사이트</dt>
+				<dd>웹사이트 제작 / Pixelab</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<dd>2015.08.13 ~ 2015.11</dd>
+				<dd><a href="http://www.bidbird.net" target="_blank">View Output</a></dd>
+			</dl> 
+		</li>
+		-->
+		<li>
+			<img src="images/naacc.jpg" alt="" />
+			<dl>
+				<dt>행정중심복합도시건설청 웹사이트</dt>
+				<dd>메인, 서브페이지 레이아웃 템플릿</dd>
+				<dd>html, css, script (100%)</dd>
+				<!--<dd>2016.01.11 ~ 2016.01.13</dd>-->
+				<dd><a href="http://www.naacc.go.kr/" target="_blank">view Output</a>
+			</dl>
+		</li>
+		<li>
+			<img src="images/mobi.jpg" alt="" />
+			<dl>
+				<dt>티씨철강 모바일 구매시스템</dt>
+				<dd>모바일 웹 구축</dd>
+				<dd>html, css, script (100%)</dd>
+				<!--<dd>2015.12.08 ~ 2016.01.11</dd>-->
+				<dd><a href="http://mobisteel.co.kr/" target="_blank">View Output</a>
+				<span>/</span> 
+				<a href="http://dung8524.dothome.co.kr/complete/tc/path.html" target="_blank">sample html</a></dd>
+			</dl>
+		</li>
+		<li>
+			<img src="images/superman.jpg" alt="" />
+			<dl>
+				<dt>슈퍼갈땐 슈퍼맨 APP</dt>
+				<dd>Hybrid APP ,웹 제작</dd>
+				<dd>iOS, Android</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.11.07 ~ 12.17</dd>-->
+				<dd><a href="https://play.google.com/store/apps/details?id=webgamja.supermen" target="_blank">Android</a>
+				<span>/</span> 
+				<a href="" target="_blank" onclick="alert('심사 대기중입니다.')">IOS</a>
+				<span>/</span> 
+				<a href="http://supermenz.com/" target="_blank">Web</a></dd>
+			</dl>
+		</li>
+		<li>
+			<img src="images/kidshyundai_on.jpg" alt="키즈현대 프로젝트" />
+			<dl>
+				<dt>키즈현대 웹사이트</dt>
+				<dd>웹사이트 리뉴얼</dd>
+				<dd>웹접근성 인증마크</dd>
+				<dd>html, css, UI script (65%)</dd>
+				<!--<dd>2013.08.26 ~ 12.09</dd>-->
+				<dd><a href="http://kids.hyundai.com" target="_blank">view Output</a></dd>					
+			</dl> 
+		</li>	
+		<li>
+			<img src="images/powertech_on.jpg" alt="파워텍 프로젝트" />
+			<dl>
+				<dt>현대파워텍 웹사이트 (국,영,중)</dt>
+				<dd>웹사이트 리뉴얼</dd>
+				<dd>2013 웹어워드 코리아 제조업부문 최우수상</dd>
+				<dd>html, css, UI script (50%)</dd>
+				<!--<dd>2013.04.15 ~ 07.15</dd>-->
+				<dd><a href="http://powertech.co.kr" target="_blank">view Output</a></dd>					
+			</dl> 
+		</li>
+		<li>
+			<img src="images/nps_on.jpg" alt="" />
+			<dl>
+				<dt>국민연금공단 웹진 리뉴얼</dt>
+				<dd>기존 웹진 리뉴얼</dd>
+				<dd>html, css, UI script(100%)</dd>
+				<!--<dd>2015.03.25 ~ 03.27</dd>-->
+				<dd><a href="http://cyber.nps.or.kr/jsp/webzine/20150325/index.html" target="_blank">view Output</a>
+			</dl> 
+		</li>
+		
+		<li>
+			<img src="images/winkia.jpg" alt="" />
+			<dl>
+				<dt>WINKIA EMO APP</dt>
+				<dd>Hybrid APP ,반응형 웹 제작</dd>
+				<dd>iOS, Android</dd>
+				<dd>html, css, UI script (100%) / 네이티브앱 가이드</dd>
+				<!--<dd>2015.08.15 ~ 11.09</dd>-->
+				<dd><a href="https://play.google.com/store/apps/details?id=com.nexcube.winkia.emo" target="_blank">Android</a>
+				<span>/</span> 
+				<a href="https://itunes.apple.com/kr/app/winkia-emo-gamjeong-gibun/id1053905272?mt=8" target="_blank">IOS</a>
+				<span>/</span> 
+				<a href="http://emo.winkia.net/" target="_blank">Web</a></dd>
+			</dl>
+			<!-- 그래프 구현 이슈, 마이페이지 이슈 -->
+		</li>
+		<li>
+			<img src="images/autoever_on.jpg" alt="현대 오토에버 프로젝트" />
+			<dl>
+				<dt>현대오토에버 웹 사이트 (영문)</dt>
+				<dd>웹사이트 리뉴얼</dd>
+				<dd>html, css, jQuery</dd>
+				<!--<dd>2013.03.11 ~ 04.12</dd>-->
+				<dd><a href="http://hyundai-autoever.com/Eng/" target="_blank">view Output</a></dd>					
+			</dl> 
+		</li>
+		<li>
+			<img src="images/textra.jpg" alt="" />
+			<dl>
+				<dt>한국섬유수출입조합 웹사이트</dt>
+				<dd>웹사이트 리뉴얼</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.08.13 ~ 2015.11.09</dd>-->
+				<dd><a href="http://www.textra.or.kr/" target="_blank">View Output</a></dd>
+			</dl> 
+		</li>
+		<li>
+			<img src="images/tech_on.jpg" alt="" />
+			<dl>
+				<dt>산업용섬유 종합정보 웹사이트</dt>
+				<dd>웹사이트 리뉴얼</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.08.13 ~ 2015.09.05</dd>-->
+				<dd><a href="http://www.techtex.or.kr/" target="_blank">View Output</a></dd>
+			</dl> 
+		</li>
+		<li>
+			<img src="images/hwamul_on.jpg" alt="" />
+			<dl>
+				<dt>모두화물 APP</dt>
+				<dd>Hybrid APP , 웹사이트 제작</dd>
+				<dd>iOS, Android</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.05.09 ~ 07.01</dd>-->
+				<dd><a href="https://play.google.com/store/apps/details?id=com.pixelab.project.moduhwamul" target="_blank">Android</a>
+				<span>/</span> 
+				<a href="https://itunes.apple.com/kr/app/moduhwamul/id1027798977?mt=8" target="_blank">IOS</a>
+				<span>/</span> 
+				<a href="http://modoowhamul.com/" target="_blank">Web</a></dd>
+			</dl> 
+		</li>
+		<li>
+			<img src="images/wooripension_on.jpg" alt="" />
+			<dl>
+				<dt>우리펜션 모바일웹</dt>
+				<dd>Hybrid APP 제작</dd>
+				<dd>모바일 웹 리뉴얼</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.05.09 ~ 06.21</dd>-->
+				<dd><a href="http://m.wooripension.com/" target="_blank">view Output</a></dd>
+			</dl> 
+		</li>
+		<li>
+			<img src="images/pixelab_on.jpg" alt="" />
+			<dl>
+				<dt>Pixelab 웹사이트 구축</dt>
+				<dd>Pixelab</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.03.09 ~ 06.13</dd>-->
+				<dd><a href="http://pixelab.co.kr" target="_blank">view Output</a></dd>
+			</dl> 
+		</li>
+		<li>
+			<img src="images/stock_on.jpg" alt="" />
+			<dl>
+				<dt>주식의정석 APP</dt>
+				<dd>Hybrid APP 제작</dd>
+				<dd>iOS, Android</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.05.10 ~ 06.10</dd>-->
+				<dd><a href="https://play.google.com/store/apps/details?id=com.pixelab.project.allthatstock" target="_blank">Android</a> 
+				<span>/</span> 
+				<a href="https://itunes.apple.com/kr/app/jusig-uijeongseog/id1016339457?mt=8" target="_blank">IOS</a></dd>
+			</dl> 
+		</li>
+		<li>
+			<img src="images/xgolf_on.jpg" alt="" />
+			<dl>
+				<dt>XGOLF MOBILE APP</dt>
+				<dd>Hybrid APP 제작</dd>
+				<dd>iOS, Android</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.01.12 ~ 05.07</dd>-->
+				<dd><a href="https://play.google.com/store/apps/details?id=com.xgolf.booking" target="_blank">Android</a> 
+				<span>/</span> 
+				<a href="https://itunes.apple.com/kr/app/xgolf-booking/id641395664?mt=8" target="_blank">IOS</a></dd>
+			</dl> 
+		</li>
+		<li>
+			<img src="images/etiac_on.jpg" alt="" />
+			<dl>
+				<dt>애띠악 MOBILE APP</dt>
+				<dd>Hybrid APP 제작</dd>
+				<dd>iOS, Android</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.04.01 ~ 05.08</dd>-->
+				<!--<dd><a href="#" target="_blank">view Output</a></dd>-->
+			</dl> 
+		</li>
+		<li>
+			<img src="images/one_on.jpg" alt="" />
+			<dl>
+				<dt>원센텐스 웹페이지</dt>
+				<dd>반응형 웹페이지</dd>
+				<dd>메인, 서브페이지 일부</dd>
+				<dd>html, css(100%)</dd>
+				<!--<dd>2015.03.24 ~ 03.30</dd>-->
+				<dd><a href="http://www.onesentence.com/onesentence/index.html" target="_blank">view Output</a></dd>					
+			</dl> 
+		</li>
+		<li>
+			<img src="images/seowon_on.jpg" alt="" />
+			<dl>
+				<dt>서원힐스 골프장 MOBILE APP</dt>
+				<dd>Hybrid APP 제작</dd>
+				<dd>PC, 모바일 하이브리드APP</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.03.12 ~ 03.31</dd>-->
+				<!--<dd><a href="#" target="_blank">view Output</a></dd>-->
+			</dl> 
+		</li>
+		<li>
+			<img src="images/biz_on.jpg" alt="" />
+			<dl>
+				<dt>코엑스 1:1비즈매칭 (국,영,관리자)</dt>
+				<dd>웹사이트 제작</dd>
+				<dd>PC, 모바일 Hybrid APP(iOS, Android)</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.02.16 ~ 04.17</dd>-->
+				<dd><a href="http://biz.characterfair.kr/por/index.do" target="_blank">view Output</a></dd>					
+			</dl> 
+		</li>	
+		<li>
+			<img src="images/characterfair_on.jpg" alt="" />
+			<dl>
+				<dt>코엑스 2015 캐릭터페어 웹사이트 (국,영)</dt>
+				<dd>웹사이트 리뉴얼</dd>
+				<dd>PC, 모바일 적응형</dd>
+				<dd>html, css, UI script (100%)</dd>
+				<!--<dd>2015.01.03 ~ 02.25</dd>-->
+				<dd><a href="http://characterfair.kr" target="_blank">view Output</a></dd>					
+			</dl> 
+		</li>		
+		<li>
+			<img src="images/kdic_on.jpg" alt="기아자동차 용어사전 프로젝트" />
+			<dl>
+				<dt>KIA Motors K-DIC </dt>
+				<dd>기존 사이트 접근성 개선 프로젝트</dd>
+				<dd>웹접근성 인증마크 - 2013.04.25</dd>
+				<!--<dd>2013.03.18 ~ 04.12</dd>-->
+				<dd><a href="http://k-dic.kia.com/kr/main/index.do" target="_blank">view Output</a></dd>					
+			</dl> 
+		</li>		
+		<li>
+			<img src="images/bk_on.jpg" alt="프로젝트비케이 프로젝트" />
+			<dl>
+				<dt>Project BK (Web + M.web)</dt>
+				<dd>Design, html, css, jQuery</dd>
+				<!--<dd>2013.01</dd>-->
+				<dd><a href="#">view Output</a></dd>					
+			</dl>
+		</li>	
+		<li>
+			<img src="images/coating_on.jpg" alt="노루페인트&amp;코팅쇼 프로젝트" />
+			<dl>
+				<dt>NOROO paint &amp; Coatings Show </dt>
+				<dd>html, css(50%)</dd>
+				<!--<dd>2012.12 ~ 2013.02</dd>-->
+				<dd><a href="http://coatingshow.noroo.com" target="_blank">view Output</a></dd>
+			</dl>
+		</li>	
+		<li>
+			<img src="images/pannel_on.jpg" alt="산타클라우드 컨트롤 패널 프로젝트" />
+			<dl>
+				<dt>SantaCloud Control pannel</dt>
+				<dd>BI,UI Design, html, css, jQuery</dd>
+				<!--<dd>2012.08 ~ 2013.02</dd>-->
+			</dl>
+		</li>			
+		<li>
+			<img src="images/sales_on.jpg" alt="세일즈노트 프로젝트" />
+			<dl>
+				<dt>SalesNote Web Solution</dt>
+				<dd>html, css, jQuery</dd>
+				<!--<dd>2012.09 ~ 2013.02</dd>-->
+			</dl>
+		</li>
+		<li>
+			<img src="images/dit_on.jpg" alt="디아이티 프로젝트" />
+			<dl>
+				<dt>DIT Website Renewal</dt>
+				<dd>html, css(100%), jQuery(90%)</dd>
+				<!--<dd>2012.09</dd>-->
+				<dd><a href="http://www.dit.co.kr" target="_blank">view Output</a></dd>
+			</dl>
+		</li>			
+		<li>
+			<img src="images/show_on.jpg" alt="2013노루 컬러트랜드쇼 프로젝트" />
+			<dl>
+				<dt>NOROO 2013 Color Trend Show (Web / M.web)</dt>
+				<dd>html, css(100%), jQuery(70%)</dd>
+				<!--<dd>2012.09</dd>-->
+				<dd><a href="http://color.noroo.com" target="_blank">view Output</a></dd>
+			</dl>
+		</li>
+		<li>
+			<img src="images/loginet_on.jpg" alt="로지넷 관리자 프로젝트" />
+			<dl>
+				<dt>Common Admin page</dt>
+				<dd>html, css</dd>
+				<!--<dd>2012.08</dd>-->
+			</dl>
+		</li>		
+		<li>
+			<img src="images/santacloudweb_on.jpg" alt="산타클라우드 프로젝트" />
+			<dl>
+				<dt>SantaCloud Website</dt>
+				<dd>html, css, jQuery</dd>
+				<!--<dd>2012.07</dd>-->
+				<dd><a href="http://santacloud.co.kr" target="_blank">view Output</a></dd>
+			</dl>
+		</li>			
+		<li>
+			<img src="images/anna_on.jpg" alt="안나의집 프로젝트" />
+			<dl>
+				<dt>Annahouse Website Renewal</dt>
+				<dd>html, css, jQuery</dd>
+				<!--<dd>2012.07</dd>-->
+				<dd><a href="http://www.annahouse.or.kr" target="_blank">view Output</a></dd>
+			</dl>
+		</li>
+		<li>
+			<img src="images/gsretail_on.jpg" alt="gs리테일 유액트 프로젝트" />
+			<dl>
+				<dt>GSretail Uact (web / M.web)</dt>
+				<dd>html, css</dd>
+				<!--<dd>2012.06</dd>-->
+			</dl>
+		</li>			
+		<li>
+			<img src="images/noroomoffice_on.jpg" alt="노루 모바일 오피스 프로젝트" />
+			<dl>
+				<dt>NOROO Mobile Office (M.web)</dt>
+				<dd>Design, html, css</dd>
+				<!--<dd>2012.05</dd>-->
+			</dl>
+		</li>
+		<li>
+			<img src="images/younp_on.jpg" alt="유앤파트너즈 프로젝트" />
+			<dl>
+				<dt>Younpartners Website Renewal</dt>
+				<dd>html, css</dd>
+				<!--<dd>2012.01 ~ 2012.03</dd>-->
+				<dd><a href="http://younpartners.com" target="_blank">view Output</a></dd>
+			</dl>
+		</li>	
+		<li>
+			<img src="images/hyundai_on.jpg" alt="현대캐피탈 유액트 프로젝트" />
+			<dl>
+				<dt>Hyundai Capi. Uact (web Solution) <br />Maintenance</dt>
+				<dd>Design, html, css</dd>
+				<!--<dd>2011.11 ~ 2011.12</dd>-->
+			</dl>
+		</li>					
+		<li>
+			<img src="images/lotte_on.jpg" alt="롯데건설 유액트 프로젝트" />
+			<dl>
+				<dt>Lotte Cons. Uact(web Solution)</dt>
+				<dd>Design, Flash motion, html, css</dd>
+				<!--<dd>2011.07 ~ 2011.09</dd>-->
+			</dl>
+		</li>			
+		<li>
+			<img src="images/youl_on.jpg" alt="율촌화학 유액트 프로젝트" />
+			<dl>
+				<dt>Youlchon Chem Uact <br />(App / web Solution)</dt>
+				<dd>Design, Flash motion, html, css</dd>
+				<!--<dd>2011.04 ~ 2011.06</dd>-->
+			</dl>
+		</li>	
+		<li>
+			<img src="images/sev_on.jpg" alt="세브란스병원 유액트 프로젝트" />
+			<dl>
+				<dt>Severance Hosp. Uact(web Solution)</dt>
+				<dd>Design, Flash motion, html, css</dd>
+				<!--<dd>2011.02 ~ 2011.03</dd>-->
+			</dl>
+		</li>				
+	</ul>	
+</div>
+</body>
+</html>
