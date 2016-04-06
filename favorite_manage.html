@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko" ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>나의 즐겨찾기</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script>
+		angular.module('myApp', [])
+			.controller('favoriteUrl', function($scope){
+				$scope.urlList = [{address : "http://www.naver.com"}];
+				$scope.add = function(url){
+					//
+					console.log(url);
+					$scope.urlList.push({address : url.address});
+					url.address = '';
+				}
+				$scope.remove = function(i){
+					$scope.urlList.splice(i, 1);
+				}
+			})
+	</script>
+	<style>
+		* {margin:0; padding:0; line-height:1;}
+		li {list-style:none;}
+		a, a:active, a:hover, a:visited {color:#000; text-decoration:none;}
+		.wrap {margin:30px auto; width:504px;}
+		.wrap h1 {margin-bottom:15px;}
+		input[type="text"] {padding:10px; width:478px; color:#000; font-size:14px; border:3px solid #2db400;}
+		.result_box {width:502px; border:1px solid #ebebeb; border-top:0;}
+		.result_box .list_cnt {padding:11px; color:#666; font-size:13px; background:#eee;}
+		.result_box .list_cnt span {color:#000; font-size:15px; font-weight:bold;}
+		.result_box .url_list li {padding:10px 15px; border-top:1px solid #eee; zoom:1;}
+		.result_box .url_list li:after {display:block; content:""; clear:both;}
+		.result_box .url_list li a {float:left; line-height:25px;}
+		.result_box .url_list li button {float:right; width:50px; height:25px; color:#fff; background:red; border:0; cursor:pointer;}
+		.result_box .url_list li:first-child {border-top:0;}
+	</style>
+</head>
+<body ng-controller="favoriteUrl">
+	<div class="wrap">
+		<h1>나의 즐겨찾기</h1>
+		<form ng-submit="add(url)">
+			<input type="text" id="" name="" ng-model="url.address" placeholder="url 입력 후 엔터키로 추가 가능합니다." />
+		</form>
+		<div class="result_box">
+			<p class="list_cnt">현재 등록된 즐겨찾기 개수 : <span>{{urlList.length}}</span> 개</p>
+			<ul class="url_list">
+				<li ng-repeat="url in urlList track by $index">
+					<a href="{{url.address}}" target="_blank">{{url.address}}</a>
+					<button type="button" ng-click="remove($index);">삭제</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
