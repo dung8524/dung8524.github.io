@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>angular chart</title>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/angular-chart.css" />
+<script src="js/chart.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-chart.js"></script>
+<script src="js/app.js"></script>
+<style>
+.tab_box {margin:50px 0 20px;}
+.tab_box button {margin-right:5px;}
+</style>
+</head>
+<!-- http://jsfiddle.net/tscok/UEHZP/ -->
+<body ng-controller="TabCtrl">
+	<div class="container tab_box">
+		<!-- ng-class="{class name : true, false}" -->
+		<button class="btn btn-default" ng-class="{'btn-primary':btn.stat}" ng-repeat="btn in btnNames track by $index" ng-click="toggle($index)">{{btn.btnName}}</button>
+	</div>
+	<div class="container chart_box">
+		<!-- chart.js
+			chart-line, chart-bar, chart-radar = 비교 /
+			chart-doughnut, chart-polar-area = 1개의 데이터
+		-->
+		<canvas class="chart chart-line" ng-show="btnNames[0].stat" chart-data="datas" chart-legend="true" chart-series="series" chart-labels="labels"></canvas>
+		<canvas class="chart chart-bar" ng-show="btnNames[1].stat" chart-data="datas" chart-legend="true" chart-series="series" chart-labels="labels"></canvas>
+		<canvas class="chart chart-radar" ng-show="btnNames[2].stat" chart-data="datas" chart-legend="true" chart-series="series" chart-labels="labels"></canvas>
+		<canvas class="chart chart-doughnut" ng-show="btnNames[3].stat" chart-data="data" chart-legend="true" chart-series="series" chart-labels="labels"></canvas>
+		<canvas class="chart chart-polar-area" ng-show="btnNames[4].stat" chart-data="data" chart-legend="true" chart-series="series" chart-labels="labels"></canvas>
+	</div>
+</body>
+</html>
